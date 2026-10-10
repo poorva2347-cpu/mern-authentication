@@ -1,0 +1,91 @@
+/* ---------- Global styles & design tokens ---------- */
+
+:root {
+  --bg: #f7f9f7;
+  --surface: #ffffff;
+  --border: #e1e8e3; /* card edges, dividers */
+  --border-input: #86938b; /* input outlines (3:1 contrast on white) */
+
+  --text: #202923;
+  --text-muted: #66736b;
+  --text-placeholder: #75817a;
+
+  --primary: #00684a;
+  --primary-hover: #00593f;
+  --primary-active: #004d37;
+  --accent: #00ed64; /* bright green: use sparingly */
+
+  --error: #b3261e;
+  --error-bg: #fff3f2;
+  --success: #00684a;
+  --success-bg: #e8f7f0;
+
+  --radius-sm: 8px;
+  --radius-lg: 12px;
+  --shadow-card: 0 1px 2px rgba(16, 24, 20, 0.04), 0 8px 24px rgba(16, 24, 20, 0.06);
+  --focus-ring: 0 0 0 3px rgba(0, 104, 74, 0.22);
+
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 4px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
